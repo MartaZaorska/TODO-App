@@ -66,10 +66,10 @@ export const GlobalStyles = createGlobalStyle`
   }
 `
 
-export const Container = styled.main`
+export const Container = styled.div`
   width: 100%;
   max-width: 610px;
-  padding: 1.4rem;
+  padding: 1.37rem;
   margin-block: 1.3rem;
   margin-inline: auto;
 
@@ -78,5 +78,13 @@ export const Container = styled.main`
   @media screen and (min-width: 768px){
     margin-block: 2.2rem;
     padding: 1.95rem;
+  }
+`;
+
+export const Main  = styled.main`
+  margin-block: 1.7rem;
+  
+  @media screen and (min-width: 768px){
+    margin-block: 2.15rem;
   }
 `;
