@@ -48,7 +48,7 @@ export const GlobalStyles = createGlobalStyle`
     background-repeat: no-repeat;
     background-position: top;
     color: ${({ theme }) => theme.todoColor};
-    font-family: 'Josefin Sans', sans-serif;
+    font-family: ${({ theme }) => theme.fontFamily};
     font-size: 18px;
     font-display: fallback;
     min-height: 100vh;
@@ -70,13 +70,13 @@ export const Container = styled.div`
   width: 100%;
   max-width: 610px;
   padding: 1.37rem;
-  margin-block: 1.3rem;
+  margin-block: 1.3rem 0.3rem;
   margin-inline: auto;
 
-  border: 1px solid yellow;
+  border: 1px solid transparent;
 
   @media screen and (min-width: 768px){
-    margin-block: 2.2rem;
+    margin-block: 2.2rem 0.3rem;
     padding: 1.95rem;
   }
 `;

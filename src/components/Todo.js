@@ -2,7 +2,6 @@ import { useId, memo } from 'react';
 import { useDispatch } from 'react-redux';
 
 import { TodoListItem, Content, CheckboxWrapper } from "./styles";
-
 import iconCross from '../assets/icon-cross.svg';
 
 function Todo({ id, title, completed }) {

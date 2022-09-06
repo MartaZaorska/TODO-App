@@ -1,7 +1,7 @@
 import { createReducer } from '@reduxjs/toolkit';
 
 import { placeholderData } from '../data/constants';
-import { addTodo, removeTodo, toggleTodo, removeCompleted } from './todoActions';
+import { addTodo, removeTodo, toggleTodo, removeCompleted, setTodos } from './todoActions';
 
 function getInitialState(){
   const localData = localStorage.getItem("todo-app-data");
@@ -18,7 +18,8 @@ const todoReducer = createReducer(getInitialState, (builder) => {
       const index = state.findIndex(todo => todo.id === action.payload);
       if(index >= 0) state[index].completed = !state[index].completed;
     })
-    .addCase(removeCompleted.type, (state) => state.filter(todo => !todo.completed));
+    .addCase(removeCompleted.type, (state) => state.filter(todo => !todo.completed))
+    .addCase(setTodos.type, (state, action) => action.payload);
 });
 
 export default todoReducer;

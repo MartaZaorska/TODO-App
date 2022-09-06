@@ -3,7 +3,7 @@ import { createContext, useContext, useState, useEffect, useCallback } from "rea
 const ThemeContext = createContext();
 
 const useThemeState = () => {
-  const [theme, setTheme] = useState('light');
+  const [theme, setTheme] = useState('dark');
 
   useEffect(() => {
     const storeTheme = localStorage.getItem("todo-app-theme");
